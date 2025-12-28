@@ -8,6 +8,11 @@
 import UIKit
 
 public struct UIOnboardingViewConfiguration {
+    /// Delay (in seconds) before the features list appears.
+    /// Exposed so host apps can tune the pause between the title screen and the features reveal.
+    /// Default kept compatible with the package's original timing (0.834s).
+    public var featuresAppearanceDelay: TimeInterval = 0.834
+
     public var appIcon: UIImage
     public var firstTitleLine: NSMutableAttributedString
     public var secondTitleLine: NSMutableAttributedString

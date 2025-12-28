@@ -79,7 +79,7 @@ final class UIOnboardingStack: UIStackView {
     }
     
     func animate(completion: (() -> Void)?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.834) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + configuration.featuresAppearanceDelay) {
             UIView.animate(withDuration: 0.666, delay: 0.0, options: .curveEaseInOut, animations: {
                 self.onboardingIcon.isHidden = true
                 self.onboardingIcon.alpha = 0
